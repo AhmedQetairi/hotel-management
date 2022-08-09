@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.billboard_group_syst_5fe95974-531a-480c-9b79-ac1e40a3cca8" model="ir.model.access" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="group_id" ref="base.group_system"/>
+    <field name="model_id" ref="studio_customization.billboard_cb326803-4f7f-418e-9ecd-843ce63cd966"/>
+    <field name="name">Billboard group_system</field>
+    <field name="perm_create" eval="True"/>
+    <field name="perm_read" eval="True"/>
+    <field name="perm_unlink" eval="True"/>
+    <field name="perm_write" eval="True"/>
+  </record>
+  <record id="studio_customization.billboard_group_user_f0a526ac-3956-4d25-83cf-ba559267b1ff" model="ir.model.access" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="group_id" ref="base.group_user"/>
+    <field name="model_id" ref="studio_customization.billboard_cb326803-4f7f-418e-9ecd-843ce63cd966"/>
+    <field name="name">Billboard group_user</field>
+    <field name="perm_create" eval="True"/>
+    <field name="perm_read" eval="True"/>
+    <field name="perm_unlink" eval="False"/>
+    <field name="perm_write" eval="True"/>
+  </record>
+</odoo>

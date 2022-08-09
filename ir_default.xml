@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.active_billboard_0fa118bb-e201-499b-a819-84dbc17719ba" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.active_billboard_47ebb38c-e13d-4f36-955e-6e5b05a286f6"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">true</field>
+  </record>
+  <record id="studio_customization.sequence_billboard_eb346314-3f50-4c81-b114-6a38350c3a1d" model="ir.default" context="{'studio': True}">
+    <field name="field_id" ref="studio_customization.sequence_billboard_2054b906-6552-418a-b006-e9957f71e401"/>
+    <field name="condition" eval="False"/>
+    <field name="json_value">10</field>
+  </record>
+</odoo>

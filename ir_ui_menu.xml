@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.sky_293a8d17-c38f-4b3a-a65f-537d76a880ad" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" eval="False"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Sky</field>
+    <field name="parent_id" eval="False"/>
+    <field name="sequence">10</field>
+    <field name="web_icon">fa fa-rocket,#EB5A46,#34495e</field>
+  </record>
+  <record id="studio_customization.sky_billboard_afa2aec4-fcb0-4028-b444-24d2ac83c249" model="ir.ui.menu" context="{'studio': True}">
+    <field name="action" ref="hotel_reservation.action_hotel_reservation_summary"/>
+    <field name="active" eval="True"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="name">Billboard</field>
+    <field name="parent_id" ref="studio_customization.sky_293a8d17-c38f-4b3a-a65f-537d76a880ad"/>
+    <field name="sequence">10</field>
+    <field name="web_icon" eval="False"/>
+  </record>
+</odoo>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="studio_customization.default_form_view_fo_edb82df2-9f75-4219-80a3-51113c74bdba" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <form>
+        <header/>
+        <sheet string="Billboard">
+          <widget name="web_ribbon" text="Archived" bg_color="bg-danger" attrs="{'invisible': [('x_active', '=', True)]}"/>
+          <field name="x_active" invisible="1"/>
+          <div class="oe_title">
+            <h1>
+              <field name="x_name" required="1" placeholder="Name..."/>
+            </h1>
+          </div>
+          <group name="studio_group_f69257">
+            <group name="studio_group_f69257_left"/>
+            <group name="studio_group_f69257_right"/>
+          </group>
+        </sheet>
+        <div class="oe_chatter" name="oe_chatter">
+          <field name="message_follower_ids"/>
+          <field name="message_ids"/>
+          <field name="activity_ids"/>
+        </div>
+      </form>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_billboard</field>
+    <field name="name">Default form view for x_billboard</field>
+    <field name="priority">16</field>
+    <field name="type">form</field>
+  </record>
+  <record id="studio_customization.default_list_view_fo_c535acc6-c58f-4ff8-bf54-206b82b7dc89" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="x_studio_sequence" widget="handle"/>
+        <field name="x_name"/>
+      </tree>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_billboard</field>
+    <field name="name">Default list view for x_billboard</field>
+    <field name="priority">16</field>
+    <field name="type">tree</field>
+  </record>
+  <record id="studio_customization.default_search_view__a3b478c5-1e7e-4838-9950-973ff98785e7" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <search>
+        <field name="x_name"/>
+        <separator/>
+        <filter string="Archived" name="archived_x_billboard" domain="[['x_active', '=', False]]"/>
+        <separator/>
+      </search>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" eval="False"/>
+    <field name="key" eval="False"/>
+    <field name="mode">primary</field>
+    <field name="model">x_billboard</field>
+    <field name="name">Default search view for x_billboard</field>
+    <field name="priority">16</field>
+    <field name="type">search</field>
+  </record>
+  <record id="studio_customization.odoo_studio_default__916345b5-a229-463e-b427-4fb3f7b80df6" model="ir.ui.view" context="{'studio': True}">
+    <field name="active" eval="True"/>
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//group[@name='studio_group_f69257_left']" position="inside">
+          <field name="x_studio_billboard_location" string="Billboard Location"/>
+        </xpath>
+      </data>
+    </field>
+    <field name="field_parent" eval="False"/>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="inherit_id" ref="studio_customization.default_form_view_fo_edb82df2-9f75-4219-80a3-51113c74bdba"/>
+    <field name="key" eval="False"/>
+    <field name="mode">extension</field>
+    <field name="model">x_billboard</field>
+    <field name="name">Odoo Studio: Default form view for x_billboard customization</field>
+    <field name="priority">99</field>
+    <field name="type">form</field>
+  </record>
+</odoo>
